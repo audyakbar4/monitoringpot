@@ -1,0 +1,16 @@
+{
+    "users": [
+        {
+            "username": "admin",
+            "password": "admin123",
+            "role": "admin"
+        },
+        {
+            "username": "user1",
+            "password": "userpass",
+            "role": "user"
+        }
+    ],
+    "tetew": "$2b$12$UMy2U29cQJYG/CSepi.QdO9cTvtUDR3UKi4pBUWys5BAXqrLtE0Be",
+    "heha": "$2b$12$doAoSNYzhi311U7moK5eU.wcd6brr9sH9JRoOjzTdXwmKmvDQK.fK"
+}

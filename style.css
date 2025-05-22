@@ -1,0 +1,226 @@
+/* === GENERAL === */
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* === HEADINGS === */
+h1, h2, h3 {
+    color: #00c7ff;
+    text-align: center;
+    text-shadow: 0 0 10px #00c7ff;
+    animation: glow 2s ease-in-out infinite alternate;
+    margin-bottom: 1rem;
+}
+
+/* === TEXT & LINKS === */
+a {
+    color: #00c7ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #03fcb1;
+}
+
+/* === BUTTONS === */
+button {
+    background-color: #00c7ff;
+    color: #0e1117;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+    background-color: #03f4fc;
+    transform: scale(1.05);
+}
+
+/* === STREAMLIT BUTTON OVERRIDE === */
+.stButton > button {
+    margin-top: 16px;
+    background-color: #00c7ff;
+    color: #0e1117;
+    border-radius: 12px;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 0 12px #00c7ff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.stButton > button:hover {
+    background-color: #03f4fc;
+    transform: scale(1.05);
+    box-shadow: 0 0 18px #03f4fc;
+}
+
+/* === ANIMATIONS === */
+@keyframes glow {
+  from { text-shadow: 0 0 5px #00c7ff; }
+  to { text-shadow: 0 0 20px #00c7ff, 0 0 30px #03fcb1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* === CONTAINERS === */
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    text-align: center;
+}
+
+/* === RESPONSIVE === */
+@media only screen and (max-width: 600px) {
+    .centered { padding: 2rem 1rem; }
+    h1 { font-size: 1.8rem; }
+    button { width: 100%; }
+}
+
+/* === FEATURE CARDS === */
+.feature-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 16px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+.feature-card:hover {
+    background-color: rgba(0, 199, 255, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 199, 255, 0.5);
+}
+
+/* === LOGOUT BUTTON === */
+.logout-button {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #00ffff;
+    padding: 6px 14px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.logout-button:hover {
+    background-color: #00ffff;
+    color: rgb(4, 0, 255);
+    transform: scale(1.05);
+}
+
+/* === LOGIN / AUTH === */
+.login-container, .auth-container {
+    background-color: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(12px);
+    padding: 2.5rem 3rem;
+    border-radius: 20px;
+    max-width: 420px;
+    margin: 4rem auto;
+    box-shadow: 0 0 25px rgba(0, 199, 255, 0.5);
+    color: #00c7ff;
+    animation: fadeIn 1.5s ease;
+    text-align: center;
+}
+.login-container h2, .auth-container h2, .auth-container h1 {
+    color: #00c7ff;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 12px #00c7ff;
+}
+.login-container button, .auth-container button {
+    width: 100% !important;
+    background-color: #00c7ff !important;
+    color: #0e1117 !important;
+    border: none !important;
+    padding: 14px !important;
+    font-size: 18px !important;
+    border-radius: 12px !important;
+    cursor: pointer !important;
+    font-weight: 700 !important;
+    transition: background-color 0.3s ease, transform 0.2s ease !important;
+}
+.login-container button:hover, .auth-container button:hover {
+    background-color: #03f4fc !important;
+    transform: scale(1.07) !important;
+}
+
+/* === INPUT FIELDS === */
+.stTextInput > div > input {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: 1.5px solid #00c7ff !important;
+    color: #ffffff !important;
+    border-radius: 10px !important;
+    padding: 12px !important;
+    font-size: 16px !important;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+.stTextInput > div > input:focus {
+    outline: none !important;
+    border-color: #03f4fc !important;
+    box-shadow: 0 0 15px #03f4fc !important;
+}
+
+/* === RADIO === */
+.stRadio > div {
+    background-color: rgba(255, 255, 255, 0.06);
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    margin-bottom: 2rem;
+}
+.stRadio > div > label {
+    color: #00c7ff;
+    font-weight: 700;
+}
+
+/* === MONITORING PAGE CUSTOM === */
+.stExpander > div {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 199, 255, 0.2);
+}
+
+.stSelectbox > div,
+.stSlider > div {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 6px;
+    color: #fff;
+}
+
+/* Status monitoring */
+div[role="status"] {
+    color: #00c7ff;
+    font-weight: bold;
+}
+
+/* Alert colors */
+.stSuccess { background-color: rgba(0, 255, 140, 0.1) !important; border-left: 5px solid #00ff8c !important; }
+.stWarning { background-color: rgba(255, 230, 0, 0.1) !important; border-left: 5px solid #ffe000 !important; }
+.stError   { background-color: rgba(255, 102, 102, 0.1) !important; border-left: 5px solid #ff6666 !important; }
+.stInfo    { background-color: rgba(0, 199, 255, 0.1) !important; border-left: 5px solid #00c7ff !important; }
+
+/* Plotly Chart Background */
+[data-testid="stPlotlyChart"] {
+    background-color: rgba(255, 255, 255, 0.04);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 199, 255, 0.3);
+}
